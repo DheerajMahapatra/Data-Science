@@ -1,0 +1,71 @@
+Customer_ID,Name,Age,Gender,City,Signup_Date,Last_Purchase_Amount,Total_Orders,Payment_Method,Feedback_Score
+C001,Rahul Sharma,25,Male,Mumbai,12-01-2023,$1200,5,UPI,4
+C002,Anita Verma, ,Female,Delhi,2023/02/15,850,3,Credit Card,5
+C003,rohit singh,31,Male,Bangalore,15-03-23,$-500,2,Debit Card,3
+C004,Pooja Mehta,27,Female,Mumbai,04-18-2023,1200,NA,Cash,4
+C005,Arjun Rao,NULL,Male,Hyderabad,2023-05-21,$2500,7,UPI,5
+C006,Neha Kapoor,22,Female,Chennai,21/06/2023,9999,15,credit card,2
+C007,Simran Kaur,29,Female,Delhi,07-07-23,700,4,COD,
+C008,Vikas Yadav,45,Male,Kolkata,2023.08.09,$450,1,Debit Card,3
+C009,Amit Shah,200,Male,Mumbai,10-09-2023,$100000,50,UPI,5
+C010,Ritu Jain,26,Female, ,11-10-2023,850,3,Cash,4
+C011,John Dsouza,34,Male,Goa,2023/11/01,$1200,5,UPI,4
+C012,Kavita Singh,28,Female,Delhi,2023-12-05,$1300,,Debit Card,5
+C013,Sameer Khan,33,Male,Hyderabad,13-01-2024,NA,6,Credit Card,3
+C014,Anjali Das,24,Female,Kolkata,2024/02/17,$800,2,COD,4
+C015,Rahul Sharma,25,Male,Mumbai,12-01-2023,$1200,5,UPI,4
+C016,Priya Nair,30,Female,Bangalore,2024-03-01,1100,4,UPI,5
+C017,Karan Malhotra,27,Male,Delhi,2024-03-15,$-200,3,Debit Card,2
+C018,Nisha Patel, ,Female,Ahmedabad,03-28-2024,$900,4,Credit card,4
+C019,Deepak Kumar,38,Male,Patna,2024/04/10,1200,5,Cash,3
+C020,Megha Sinha,21,Female,NULL,15-05-2024,$600,2,COD,5
+C021,Suresh Reddy,41,Male,Chennai,2024-06-01,$2500,8,UPI,4
+C022,Alok Gupta,29,Male,Delhi,06/15/2024,450,1,Credit Card,3
+C023,Swati Mishra,32,Female,Lucknow,2024-07-07,$700,3,Cash,4
+C024,Manish Tiwari,27,Male,Mumbai,07-20-24,850,2,Debit Card,NA
+C025,Tanya Roy,26,Female,Kolkata,2024/08/18,$950,4,UPI,5
+C026,Abhishek Jain,35,Male,Jaipur,2024-09-09,$1500,6,Credit Card,4
+C027,Radhika Iyer,28,Female,Chennai,2024.10.10,$2000,7,Cash,5
+C028,Vinay Kumar,39,Male,Bangalore,11-11-2024,$300,1,COD,2
+C029,Sonal Arora,24,Female,Delhi,2024-12-01, ,3,UPI,4
+C030,Rakesh Singh,33,Male,Hyderabad,01/01/2025,$1750,5,Debit Card,3
+C031,Divya Sharma,22,Female,Mumbai,2025-01-15,$800,2,Credit Card,4
+C032,Harshit Verma,27,Male,Delhi,2025-02-01,$950,4,COD,3
+C033,Ayesha Khan,29,Female,Bhopal,2025-02-20,$1050,5,UPI,5
+C034,Anil Kumar,42,Male,Patna,2025-03-05,$2200,6,Cash,4
+C035,Pallavi Sen,31,Female,Kolkata,2025-03-25,$1300,3,Credit Card,4
+C036,Sachin Rao,36,Male,Hyderabad,04-10-2025,$1800,5,UPI,3
+C037,Komal Jain,25,Female,Jaipur,2025/04/20,$600,2,COD,5
+C038,Aditya Singh,28,Male,Lucknow,2025-05-01,$900,4,Debit Card,4
+C039,Shreya Gupta,23,Female,Delhi,2025-05-15,$750,3,Credit Card,2
+C040,Nitin Sharma,37,Male,Mumbai,2025-06-01,$2100,6,UPI,5
+C041,Arpita Das,27,Female,Kolkata,2025-06-18,$500,2,COD,3
+C042,Kunal Mehta,34,Male,Ahmedabad,2025-07-01,$1200,4,Debit Card,4
+C043,Shruti Iyer,30,Female,Chennai,2025-07-20,$1400,5,Credit Card,5
+C044,Mayank Arora,29,Male,Delhi,2025-08-01,$1000,3,UPI,4
+C045,Preeti Singh,24,Female,Bhopal,2025-08-15,$650,2,COD,3
+C046,Rohit S.,31,Male,Bangalore,2025-09-01,$800,4,Credit Card,4
+C047,Ananya Kapoor,28,Female,Mumbai,2025-09-15,$950,3,Debit Card,5
+C048,Vivek Jain,40,Male,Jaipur,2025-10-01,$2500,7,UPI,4
+C049,Kriti Sharma,22,Female,Delhi,2025-10-15,$550,2,Cash,3
+C050,Arun Verma,35,Male,Hyderabad,2025-11-01,$1750,5,Credit Card,4
+C051,Nikita Das,26,Female,Kolkata,2025-11-20,$1200,4,UPI,5
+C052,Varun Reddy,39,Male,Chennai,2025-12-01,$2200,6,COD,4
+C053,Priyansh Gupta,28,Male,Delhi,2025-12-15,$900,3,Debit Card,3
+C054,Meera Nair,30,Female,Bangalore,2026-01-01,$1300,4,Credit Card,5
+C055,Sahil Khan,33,Male,Mumbai,2026-01-20,$1100,4,UPI,4
+C056,Ritika Arora,25,Female,Delhi,2026-02-01,$750,2,COD,3
+C057,Imran Sheikh,45,Male,Hyderabad,2026-02-15,$3000,8,Credit Card,5
+C058,Garima Joshi,27,Female,Jaipur,2026-03-01,$850,3,UPI,4
+C059,Sunil Yadav,38,Male,Lucknow,2026-03-20,$950,3,Cash,2
+C060,Priyanka Singh,29,Female,Bhopal,2026-04-01,$1000,4,Debit Card,4
+C061,Ankit Tiwari,34,Male,Patna,2026-04-15,$2000,6,Credit Card,5
+C062,Sneha Kapoor,23,Female,Mumbai,2026-05-01,$700,2,COD,3
+C063,Raj Malhotra,36,Male,Delhi,2026-05-20,$1800,5,UPI,4
+C064,Aarti Sharma,31,Female,Kolkata,2026-06-01,$1250,4,Credit Card,5
+C065,Manoj Verma,42,Male,Hyderabad,2026-06-15,$2100,6,Cash,4
+C066,Tanvi Rao,28,Female,Chennai,2026-07-01,$950,3,Debit Card,3
+C067,Kabir Singh,29,Male,Mumbai,2026-07-15,$1050,4,UPI,4
+C068,Neeraj Kumar,37,Male,Delhi,2026-08-01,$2300,7,Credit Card,5
+C069,Shalini Mehta,26,Female,Ahmedabad,2026-08-20,$800,3,COD,4
+C070,Ravi Patel,33,Male,Jaipur,2026-09-01,$1500,5,Debit Card,3
