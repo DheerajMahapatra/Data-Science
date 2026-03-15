@@ -32,3 +32,81 @@ if __name__ == "__main__":
 
     finished_time = time.time() - t
     print(finished_time)
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+'''
+Main Difference :-
+| Feature       | Multithreading      | Multiprocessing |
+| ------------- | ------------------- | --------------- |
+| Memory        | Shared              | Separate        |
+| Speed         | Faster creation     | Slower creation |
+| Communication | Easy                | Harder          |
+| CPU usage     | Limited (GIL issue) | Full CPU cores  |
+| Best for      | I/O tasks           | CPU tasks       |
+
+
+
+Python me important concept: GIL
+
+Python me Global Interpreter Lock (GIL) hota hai.
+Iska matlab:
+    👉 Ek time pe sirf 1 thread Python bytecode execute kar sakta hai.
+
+Isliye CPU-heavy tasks me multithreading fast nahi hota.
+
+Example:
+    Thread 1 -> wait
+    Thread 2 -> wait
+
+Is problem ko solve karne ke liye multiprocessing use karte hain.
+
+
+
+Use Multithreading when:
+✔ Network requests
+✔ File reading/writing
+✔ Web scraping
+✔ Database calls
+✔ API calls
+
+Example:
+    Download 10 images at same time
+    
+    
+    
+Use Multiprocessing when:
+✔ Heavy calculations
+✔ Machine learning
+✔ Data analysis
+✔ Image processing
+✔ Scientific computing
+
+Example:
+    Calculate squares of 1 million numbers
+    
+    
+    
+❓ If threads can run concurrently why use processes?
+
+Answer:
+    Because Python GIL prevents true parallel CPU execution in threads, so for CPU-intensive tasks we use multiprocessing to utilize multiple CPU cores.
+    
+    
+    
+Short Memory Trick
+    I/O work → Threads
+    CPU work → Processes
+'''
+    
