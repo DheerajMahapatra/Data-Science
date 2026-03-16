@@ -9,10 +9,11 @@ def square_number(number):
 
 numbers = [1,2,3,4,5]
 
+t = time.time()
+
 if __name__ == "__main__":
     with ProcessPoolExecutor(max_workers=3) as executor:
         results = executor.map(square_number, numbers)
-        t = time.time()
         
     for result in results:
         print(result)
