@@ -1,0 +1,145 @@
+Flask Framework
+
+1. WSGI --> Web Server Gatway Interface
+2. Jinja 2 Template Engine
+
+
+Flask :- Web Framework which is created with the Python Programming Language
+
+            _______________
+            |             |
+            |  Web        |
+            |   Server    |
+            |_____________|
+                   /\
+            ________|______
+            |             |
+            |  AWS EC2    |
+            |  Azure App  |
+            |  APACHE     |
+            |  IIS        |
+            |_____________|
+
+
+Req 1 (/home)  ──▶
+Req 2          ──▶        ┌───────────────┐
+Req 3          ──▶        │   Web Server  │
+                          │               │
+                          └───────────────┘
+                                  ▲
+                                  │
+                      ┌────────────────────┐
+                      │  AWS EC2           │
+                      │  Azure App         │
+                      │  Apache            │
+                      │  IIS               │
+                      └────────────────────┘
+
+                              ▲
+                              │   │
+                              |   │   WSGI
+                              |   │ (Web Server Gateway Interface)
+                              |   ▼
+
+                        ┌───────────────┐
+                        │    Web App    │  ──▶ Flask Framework
+                        │               │
+                        │   /home       │
+                        │   /API        │
+                        │   /functional │
+                        └───────────────┘
+
+
+
+
+
+           Jinja2  →  Web Template Engine
+                         │
+                         ▼
+
+                 ┌───────────────┐
+                 │  Web Templates│
+                 └───────────────┘
+                        │
+                        │
+                        ▼
+                     Web Page
+
+                        ▲
+                        │
+                        │
+                 ┌───────────────┐
+                 │  Data Source  │
+                 └───────────────┘
+                        │
+        ┌───────────────┼───────────────┬───────────────┐
+        ▼               ▼               ▼               ▼
+      SQL DB        CSV Sheet        ML Model        MongoDB
+
+Example:
+
+        ┌──────────────────────┐
+        │   Layout of a Page   │
+        │                      │
+        │   [ Image ]          │
+        │                      │
+        │   [ Text Box ]       │
+        │   [  GET  ] Button   │
+        └──────────────────────┘
+                 │
+                 │
+                 ▼
+             ML Model
+                 ▲
+                 │
+                 │
+        ┌──────────────────────┐
+        │        API           │
+        │                      │
+        │   [ Endpoint ]       │
+        │   [ Endpoint ]       │
+        └──────────────────────┘
+                 │
+                 ▼
+              Database
+
+
+
+
+
+
+⚔️ 3. Difference (Most Important 🔥)
+| Feature | WSGI                    | Jinja2              |
+| ------- | ----------------------- | ------------------- |
+| Type    | Interface/Protocol      | Template Engine     |
+| Kaam    | Server ↔ Python connect | HTML dynamic banana |
+| Use     | Backend communication   | Frontend rendering  |
+| Example | Gunicorn, uWSGI         | Flask templates     |
+| Role    | Request handle karta    | UI banata           |
+
+💥 Simple Line Difference
+
+👉
+WSGI backend communication handle karta hai
+👉
+Jinja2 frontend me data show karta hai
+
+🧠 Full Flow Combine
+User → Web Server → WSGI → Flask App
+                          ↓
+                     Data process
+                          ↓
+                     Jinja2 Template
+                          ↓
+                     HTML Response
+                          ↓
+User ko dikhta hai
+🎯 Interview One-Liner
+
+👉
+"WSGI is a standard interface between web servers and Python applications, while Jinja2 is a template engine used to generate dynamic HTML content."
+
+😎 Final Samajh
+
+👉 WSGI = backend pipeline 🚀
+👉 Jinja2 = frontend rendering 🎨
