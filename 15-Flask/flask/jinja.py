@@ -37,7 +37,7 @@ def submit():
     if request.method == 'POST':
         name = request.form['name']
         return f"Hello {name}!"
-    return render_template('getresult.html')
+    return render_template('form.html')
 
 
 ## Variable Rule
@@ -80,8 +80,12 @@ def fail(score):
     
     return render_template('result.html', results = score)
 
-@app.route('/submit',methods=['POST','GET'])
+@app.route('/result',methods=['POST','GET'])
 def result():
+    
+    if request.method == 'GET':
+        return render_template('getresult.html')
+    
     total_score=0
     if request.method=='POST':
         science=float(request.form['science'])
