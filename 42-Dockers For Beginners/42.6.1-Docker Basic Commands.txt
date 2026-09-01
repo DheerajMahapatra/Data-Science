@@ -1,0 +1,117 @@
+First we have to pull the images :-
+
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+PS C:\Users\USER> docker pull docker/getting-started
+Using default tag: latest
+latest: Pulling from docker/getting-started
+4f7e34c2de10: Pull complete
+f1d1c9928c82: Pull complete
+ee68d3549ec8: Pull complete
+9b6f639ec6ea: Pull complete
+33e0cbbb4673: Pull complete
+c158987b0551: Pull complete
+1e35f6679fab: Pull complete
+b6334b6ace34: Pull complete
+cb9626c74200: Pull complete
+Digest: sha256:d79336f4812b6547a53e735480dde67f8f8f7071b414fbd9297609ffb989abc1
+Status: Downloaded newer image for docker/getting-started:latest
+docker.io/docker/getting-started:latest
+
+PS C:\Users\USER> docker images
+                                                        i Info →   U  In Use
+IMAGE                       ID             DISK USAGE   CONTENT SIZE   EXTRA
+docker/getting-started:latest
+                            d79336f4812b       73.9MB         21.4MB
+PS C:\Users\USER>
+
+
+
+
+Then getting Started :-
+
+docker run -d -p 80:80 docker/getting-started
+
+
+-d is used for detached mode
+-p is used for assign the port or map port from our local host
+Host port and Container port are different
+80:80
+first is Host port
+second is Container Port
+
+
+For check our Docker is working or not we use "docker ps "
+Is used for to check whether the Container is working or Not
+
+PS C:\Users\USER> docker ps
+CONTAINER ID   IMAGE                    COMMAND                  CREATED          STATUS          PORTS                                 NAMES
+fc12d0cba086   docker/getting-started   "/docker-entrypoint.…"   19 seconds ago   Up 18 seconds   0.0.0.0:80->80/tcp, [::]:80->80/tcp   admiring_kirch
+PS C:\Users\USER>
+
+Now our Docker is working as a Container
+
+In browser enter "127.0.0.1:80" then you can see our Getting Started Application is now stared the url is "http://127.0.0.1/tutorial/"
+
+For Stop the Container:-
+
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+PS C:\Users\USER> docker ps
+CONTAINER ID   IMAGE                    COMMAND                  CREATED         STATUS         PORTS                                 NAMES
+fc12d0cba086   docker/getting-started   "/docker-entrypoint.…"   8 minutes ago   Up 8 minutes   0.0.0.0:80->80/tcp, [::]:80->80/tcp   admiring_kirch
+PS C:\Users\USER> docker stop fc12d0cba086
+fc12d0cba086
+PS C:\Users\USER> docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+PS C:\Users\USER>
+
+* First check the status using "docker ps"
+* Then type "docker stop {CONTAINER ID}"
+* Now again type "docker ps" then you can see Container is stoped
+
+Using "docker rm -f {IMAGE ID}" we can easily remove image from Container 
+
+Now using "docker images" you can see the image is no longer exist in the container
+
+Using "docker run {Image Name}" with the help of run command if the image is not present in container then it will pull the image from Docker Hub automatically then run 
+
+
+
+
+PS C:\Users\USER> docker run hello-world
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+
+Now we can see the output which is present in this image 
+
+If we enter "docker ps" you can see no container is available for this hello-world
+
+But we type "docker images" there is an image of hello-world
+PS C:\Users\USER> docker images
+                                                        i Info →   U  In Use
+IMAGE                       ID             DISK USAGE   CONTENT SIZE   EXTRA
+docker/getting-started:latest
+                            d79336f4812b       73.9MB         21.4MB    U
+hello-world:latest          5dd0d3e6e255       25.9kB         9.49kB    U

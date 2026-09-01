@@ -1,0 +1,60 @@
+Multithreading And MultiProcessing
+
+1. Program
+2. Process
+3. Threads
+4. Example of Process And Threads
+
+
+1. Program --> A Program is a sequence of Instruction written in Programming Language [eg:- Python, C++]
+
+eg :- Goggle Chrome --> .exe <-- Program --> Browser Should Work
+    Word
+    Excel
+
+
+2. Process --> A Process is simply an instance of a program that is being executed
+
+                             ___________________________________
+                            | Code Segment | Data Segment | Heap|
+                            |______________|______________|_____|
+                            | Stack             |     Registers |
+                            |___________________|_______________|
+
+Separate Memory Space :
+    (*) One process cannot Corrupt another process
+    (*) I/O Requirements [Resources]
+    (*) Increased execution time to switch between processes.
+
+Eg : Browser
+    Excel --> process --> I
+    App --> Process.
+
+
+
+3. Thread --> a thread is a unit of execution within a process
+
+        Single Threaded process
+         ___________________________________
+        | Code Segment | Data Segment | Heap|
+        |______________|______________|_____|
+        | Stack             |     Registers |
+        |___________________|_______________|
+        |                                   |
+        |                  $                |
+        |___________________________________|
+
+eg :- MS PAINT --> Process --> Thread --> ☐ -- Box
+                                    |
+                                     --> 🅡 --> Circle
+
+
+Multi Threaded process
+         ______________________________________
+        | Code Segment | Data Segment | Heap   |
+        |______________|______________|________|
+        | Stack | Registers | Stack | Registers|
+        |_______|___________|_______|__________|
+        |                   |                  |
+        |        $          |        $         |
+        |___________________|__________________|

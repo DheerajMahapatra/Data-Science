@@ -1,0 +1,10 @@
+ipykernel
+scikit-learn
+pandas
+numpy
+matplotlib
+seaborn
+bs4
+flask
+streamlit
+scikit-learn

@@ -1,0 +1,29 @@
+Agenda
+
+1 - Set up the GitHub {Repository}
+  a)new environment
+  b)setup.py
+  c)requirements.txt
+
+
+
+## Now open Anaconda Prompt type cd < give your ml project folder path > press enter
+	then type your drive name < D: > like this then hit enter
+	then type code . and press enter
+
+Now you will see that your project folder will be open in vs code with this given location
+
+
+Then open the terminal in vs code (cmd / powercell) what ever and type {conda create -p venv python==3.8 -y} press enter
+
+This is will create your .venv file for your project ow we can say it's our virtual enviromnent
+
+Then type {conda activate venv/} hit enter this will activate your enviromnet in short you will automatically get enter your environment
+
+Now do this steps :-
+	git init
+ 	git add .
+	git commit -m "First commit"
+	git branch -M main
+	git remote add origin 	https://github.com/YOUR_USERNAME/mlproject.git
+	git push -u origin main

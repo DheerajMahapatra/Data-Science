@@ -1,0 +1,130 @@
+PS D:\code> conda activate base
+
+## First Login
+PS D:\code> docker login
+Authenticating with existing credentials... [Username: dheerajmahapatra]
+
+i Info → To login with a different account, run 'docker logout' followed by 'docker login'
+
+
+Login Succeeded
+
+## Check Images
+PS D:\code> docker images
+                                   i Info →   U  In Use
+IMAGE          ID             DISK USAGE   CONTENT SIZE
+docker/getting-started:latest
+               d79336f4812b       73.9MB         21.4MB
+hello-world:latest
+               5dd0d3e6e255       25.9kB         9.49kB
+welcome-app:latest
+               2ca8f47846b8       96.5MB         23.9MB
+
+## Remove the Old Image
+PS D:\code> docker image rm -f welcome-app
+Untagged: welcome-app:latest
+
+## Check Image is Remove or Not
+PS D:\code> docker images
+                                   i Info →   U  In Use
+IMAGE          ID             DISK USAGE   CONTENT SIZE
+docker/getting-started:latest
+               d79336f4812b       73.9MB         21.4MB
+hello-world:latest
+               5dd0d3e6e255       25.9kB         9.49kB
+
+
+## GO to specific folder location if NOT
+PS D:\code> cd '.\42-Dockers For Beginners\'
+PS D:\code\42-Dockers For Beginners> cd '.\HELLO WORLD\'
+
+
+## Push the image with your user name
+PS D:\code\42-Dockers For Beginners\HELLO WORLD> docker build -t dheerajmahapatra/welcome-app .
+[+] Building 2.7s (10/10) FINISHED docker:desktop-linux
+ => [internal] load build definition from Docker  0.0s
+ => => transferring dockerfile: 146B              0.0s
+ => [internal] load metadata for docker.io/libra  2.3s
+ => [auth] library/python:pull token for registr  0.0s
+ => [internal] load .dockerignore                 0.0s
+ => => transferring context: 2B                   0.0s
+ => [internal] load build context                 0.0s
+ => => transferring context: 333B                 0.0s
+ => [1/4] FROM docker.io/library/python:3.12-alp  0.0s
+ => => resolve docker.io/library/python:3.12-alp  0.0s
+ => CACHED [2/4] COPY . /app                      0.0s
+ => CACHED [3/4] WORKDIR /app                     0.0s
+ => CACHED [4/4] RUN pip install -r requirements  0.0s
+ => exporting to image                            0.1s
+ => => exporting layers                           0.0s
+ => => exporting manifest sha256:31a7b13d51c8ea8  0.0s
+ => => exporting config sha256:62940512798fcfc77  0.0s
+ => => exporting attestation manifest sha256:66a  0.0s
+ => => exporting manifest list sha256:607a941ea6  0.0s
+ => => naming to docker.io/dheerajmahapatra/welc  0.0s
+ => => unpacking to docker.io/dheerajmahapatra/w  0.0s
+
+
+ ## Check image is Pushed or NOT
+PS D:\code\42-Dockers For Beginners\HELLO WORLD> docker images
+                                   i Info →   U  In Use
+IMAGE          ID             DISK USAGE   CONTENT SIZE
+dheerajmahapatra/welcome-app:latest
+               607a941ea63e       96.5MB         23.9MB
+docker/getting-started:latest
+               d79336f4812b       73.9MB         21.4MB
+hello-world:latest
+               5dd0d3e6e255       25.9kB         9.49kB
+
+
+## You change the image name (optional)
+PS D:\code\42-Dockers For Beginners\HELLO WORLD> docker tag dheerajmahapatra/welcome-app dheerajmahapatra/welcome-app1
+
+
+## Check the image
+PS D:\code\42-Dockers For Beginners\HELLO WORLD> docker images
+                                   i Info →   U  In Use
+IMAGE          ID             DISK USAGE   CONTENT SIZE
+dheerajmahapatra/welcome-app1:latest
+               607a941ea63e       96.5MB         23.9MB
+dheerajmahapatra/welcome-app:latest
+               607a941ea63e       96.5MB         23.9MB
+docker/getting-started:latest
+               d79336f4812b       73.9MB         21.4MB
+hello-world:latest
+               5dd0d3e6e255       25.9kB         9.49kB
+
+
+## Push the Docker Image To Docker HUB (In end add :latest {it represent the version})
+PS D:\code\42-Dockers For Beginners\HELLO WORLD> docker push dheerajmahapatra/welcome-app:latest
+The push refers to repository [docker.io/dheerajmahapatra/welcome-app]
+0021712cb493: Layer already exists 
+55afa1ecc21d: Layer already exists 
+82722ec17068: Already exists 
+44136fa355b3: Already exists 
+7eec6ed36766: Pushed 
+5086b6265f8c: Layer already exists 
+1fd3dfc01c8a: Layer already exists 
+4f4fb700ef54: Layer already exists 
+b768fded5144: Pushed 
+latest: digest: sha256:607a941ea63e4f3a3fd1546336b7584d316cbb1ba110bfd4624c24c7fbcfd09c size: 856
+
+
+## Remove the image for checking
+PS D:\code\42-Dockers For Beginners\HELLO WORLD> docker image rm -f dheerajmahapatra/welcome-app:latest
+Untagged: dheerajmahapatra/welcome-app:latest
+
+
+## Pll your Image from Docker HUB. Which is Pushed by you
+PS D:\code\42-Dockers For Beginners\HELLO WORLD> docker pull dheerajmahapatra/welcome-app
+Using default tag: latest
+latest: Pulling from dheerajmahapatra/welcome-app
+Digest: sha256:607a941ea63e4f3a3fd1546336b7584d316cbb1ba110bfd4624c24c7fbcfd09c
+Status: Downloaded newer image for dheerajmahapatra/welcome-app:latest
+docker.io/dheerajmahapatra/welcome-app:latest
+
+
+## Now run Docker Image (Shown in Web Browser using your local host or address port)
+PS D:\code\42-Dockers For Beginners\HELLO WORLD> docker run -d -p 5000:5000 dheerajmahapatra/welcome-app:latest
+0eb01be31f48496561692a6e56277ea7397c3b80c46abf914320001fc54589c3
+PS D:\code\42-Dockers For Beginners\HELLO WORLD> 
