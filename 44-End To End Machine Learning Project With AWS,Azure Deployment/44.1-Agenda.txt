@@ -5,7 +5,7 @@ Agenda
   b)setup.py
   c)requirements.txt
 
-
+2. src folder and build the package
 
 ## Now open Anaconda Prompt type cd < give your ml project folder path > press enter
 	then type your drive name < D: > like this then hit enter
@@ -27,3 +27,47 @@ Now do this steps :-
 	git branch -M main
 	git remote add origin 	https://github.com/YOUR_USERNAME/mlproject.git
 	git push -u origin main
+
+
+
+If you add .gitignore file through "GitHub" then do one thing open code and then type in terminal "git pull"
+	you can see all the updation will happen and that file will be shown in your "CodeBase"
+
+
+
+
+Create "setup.py" it is responsible for in creating my machine learning application as a package, and that can be install in ypur project and use it.
+	From this we can build our machine application as package even deploy this in PyPy and from this anybody can install it or use it.
+	(Building our application as a package itself)
+
+
+Now create "src/__init__.py" here you can add your project file what ever
+
+After all this and complete your "requirements.txt" and "setup.py" file then in terminal run {pip install -r requirements.txt}
+	it will install all the dependencies and create a folder {mlproject.egg-info}
+
+	The mlproject.egg-info folder contains metadata about your Python project that is generated when you install/package it.
+
+	In simple words:
+	mlproject.egg-info tells Python/pip information about your project and its dependencies.
+
+	For example, it may contain:
+	PKG-INFO → project name, version, author, description
+	requires.txt → required libraries
+	top_level.txt → package names
+	dependency_links.txt → dependency information
+	SOURCES.txt → files included in the package
+
+
+
+
+	-e = editable
+	. = current project
+	-e . = install my current project, but keep it connected to my source code.
+	-e . → make your local ML project importable and editable during development.
+
+	It makes your own project available as a Python package while you are developing it.
+
+	your project gets installed in the environment, so Python can find mlproject.
+
+	And because it is editable, when you change your code, Python uses the changed code immediately—you don't have to reinstall every time.
