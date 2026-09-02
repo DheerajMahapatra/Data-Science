@@ -71,3 +71,26 @@ After all this and complete your "requirements.txt" and "setup.py" file then in 
 	your project gets installed in the environment, so Python can find mlproject.
 
 	And because it is editable, when you change your code, Python uses the changed code immediately—you don't have to reinstall every time.
+
+
+	In your ML project
+
+	You have:
+
+	src/
+	└── mlproject/
+		├── components/
+		├── pipeline/
+		└── utils.py
+
+	You put:
+
+	-e .
+
+	in requirements.txt.
+
+	Then:
+
+	pip install -r requirements.txt
+
+	installs your project itself.
