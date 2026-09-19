@@ -4,4 +4,6 @@ seaborn
 matplotlib
 warnings
 sciket-learn
+catboost
+xgboost
 -e .
