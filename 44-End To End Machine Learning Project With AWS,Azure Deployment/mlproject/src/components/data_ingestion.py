@@ -50,3 +50,106 @@ if __name__=="__main__":
     train_data,test_data=obj.initiate_data_ingestion()
 
 '''RUN Command :- python -m src.components.data_ingestion'''
+
+
+
+'''
+================ DATA INGESTION EXPLANATION ================
+
+@dataclass
+- Used to create a configuration class for storing file paths.
+
+class DataIngestionConfig:
+- Stores paths of raw, train, and test datasets.
+
+train_data_path = 'artifacts/train.csv'
+- Location where training data will be saved.
+
+test_data_path = 'artifacts/test.csv'
+- Location where testing data will be saved.
+
+raw_data_path = 'artifacts/data.csv'
+- Location where the original dataset will be saved.
+
+
+class DataIngestion:
+- Handles the complete data ingestion process.
+
+self.ingestion_config = DataIngestionConfig()
+- Creates the configuration object and gets all file paths.
+
+
+pd.read_csv(r'notebook\data\stud.csv')
+- Reads the original CSV dataset.
+- 'r' means raw string, so Windows '\' is treated correctly.
+
+
+os.makedirs(..., exist_ok=True)
+- Creates the artifacts folder if it does not already exist.
+
+
+df.to_csv(...)
+- Saves the original dataset into artifacts/data.csv.
+
+
+train_test_split(df, test_size=0.2, random_state=42)
+- Splits the dataset into:
+  80% Training Data
+  20% Testing Data
+- random_state=42 keeps the split the same every time.
+
+
+train_set.to_csv(...)
+- Saves training data as artifacts/train.csv.
+
+
+test_set.to_csv(...)
+- Saves testing data as artifacts/test.csv.
+
+
+return (train_data_path, test_data_path)
+- Returns the locations of the train and test files.
+
+
+try:
+- Contains the main data ingestion code.
+
+
+except Exception as e:
+- Catches errors if something goes wrong.
+
+
+raise CustomException(e, sys)
+- Sends the error to the project's custom exception handler.
+
+
+if __name__ == "__main__":
+- Runs the code only when this Python file is executed directly.
+
+
+obj = DataIngestion()
+- Creates an object of the DataIngestion class.
+
+
+obj.initiate_data_ingestion()
+- Starts the complete data ingestion process.
+
+
+==================== FLOW ====================
+
+CSV Dataset
+     ↓
+Read Dataset
+     ↓
+Save Raw Data
+     ↓
+80/20 Train-Test Split
+     ↓
+Save train.csv + test.csv
+     ↓
+Ready for Data Transformation
+
+Run:
+python -m src.components.data_ingestion
+================================================
+'''
