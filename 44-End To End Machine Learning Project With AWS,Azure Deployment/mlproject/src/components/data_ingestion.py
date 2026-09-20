@@ -138,18 +138,23 @@ obj.initiate_data_ingestion()
 ==================== FLOW ====================
 
 CSV Dataset
-     ↓
+    ↓
 Read Dataset
-     ↓
+    ↓
 Save Raw Data
-     ↓
+    ↓
 80/20 Train-Test Split
-     ↓
+    ↓
 Save train.csv + test.csv
-     ↓
+    ↓
 Ready for Data Transformation
 
 Run:
 python -m src.components.data_ingestion
 ================================================
 '''
+
+
+'''@dataclass is used to create classes that mainly store data, while automatically generating common methods like __init__().
+
+So basically, @dataclass = less code + easy data/configuration management.'''
