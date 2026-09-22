@@ -6,4 +6,4 @@ warnings
 sciket-learn
 catboost
 xgboost
--e .
+#-e .
