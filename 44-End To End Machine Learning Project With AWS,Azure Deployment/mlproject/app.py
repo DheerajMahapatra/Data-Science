@@ -44,3 +44,5 @@ def predict_datapoint():
 if __name__=="__main__":
     app.run(host="0.0.0.0",debug=True)
 
+'''This is for Testing the application when you want to deploy this application so please make sure
+Delete {app.py} and keep only {application.py}'''
