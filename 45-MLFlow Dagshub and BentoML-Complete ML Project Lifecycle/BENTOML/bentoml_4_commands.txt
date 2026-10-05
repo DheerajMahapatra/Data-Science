@@ -1,0 +1,75 @@
+BentoML - 4 Next Step Commands
+=================================
+
+Built Bento:
+iris_classifier:eqhh466asoogzbrd
+
+
+1. DEPLOY TO BENTOCLOUD
+-----------------------
+Command:
+bentoml deploy iris_classifier:eqhh466asoogzbrd -n ${DEPLOYMENT_NAME}
+
+Meaning:
+Deploys the Bento service directly to BentoCloud.
+
+Use this when:
+You want to run your ML service on BentoCloud.
+
+
+2. UPDATE AN EXISTING BENTOCLOUD DEPLOYMENT
+--------------------------------------------
+Command:
+bentoml deployment update --bento iris_classifier:eqhh466asoogzbrd ${DEPLOYMENT_NAME}
+
+Meaning:
+Updates an already existing BentoCloud deployment with this new Bento version.
+
+Use this when:
+You already have a deployment on BentoCloud and want to replace it with the new version.
+
+
+3. CONTAINERIZE THE BENTO
+-------------------------
+Command:
+bentoml containerize iris_classifier:eqhh466asoogzbrd
+
+Meaning:
+Converts the built Bento into a Docker image.
+
+Use this when:
+You want to run/deploy your ML service using Docker.
+
+Typical flow:
+Model -> service.py -> bentofile.yaml -> bentoml build -> Bento -> Docker Image
+
+
+4. PUSH TO BENTOCLOUD
+---------------------
+Command:
+bentoml push iris_classifier:eqhh466asoogzbrd
+
+Meaning:
+Uploads/pushes the built Bento to BentoCloud.
+
+Use this when:
+You want to store the Bento in BentoCloud and use it for deployment.
+
+
+IMPORTANT
+---------
+You do NOT need to run all 4 commands.
+
+For a local Docker deployment:
+1. bentoml build
+2. bentoml serve
+3. Test the API
+4. bentoml containerize
+5. Run the Docker container
+
+For BentoCloud deployment:
+1. bentoml build
+2. bentoml deploy
+   OR
+   bentoml push
+   followed by deployment as required.
